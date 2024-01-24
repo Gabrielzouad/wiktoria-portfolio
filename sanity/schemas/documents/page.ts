@@ -25,7 +25,7 @@ export default defineType({
     defineField({
       name: 'overview',
       description:
-        'Used both for the <meta> description tag for SEO, and the personal website subheader.',
+        'Brukes for å gi en kort beskrivelse av siden. Denne vises i søkeresultater og delinger på sosiale medier.',
       title: 'Overview',
       type: 'array',
       of: [
@@ -56,7 +56,7 @@ export default defineType({
       name: 'body',
       title: 'Body',
       description:
-        "This is where you can write the page's content. Including custom blocks like timelines for more a more visual display of information.",
+        "Brukes for å legge til innhold på siden. Her kan du legge til tekst, bilder, lenker, og andre elementer.",
       of: [
         // Paragraphs
         defineArrayMember({
@@ -109,7 +109,7 @@ export default defineType({
               type: 'string',
               title: 'Alt text',
               description:
-                'Alternative text for screenreaders. Falls back on caption if not set',
+                'Alt tekst for de som ikke kan lese, beskriv bilde kort',
             }),
           ],
         }),
