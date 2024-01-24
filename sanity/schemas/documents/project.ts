@@ -11,7 +11,7 @@ export default defineType({
   fields: [
     defineField({
       name: 'title',
-      description: 'This field is the title of your project.',
+      description: 'Tittel på prosjektet',
       title: 'Title',
       type: 'string',
       validation: (rule) => rule.required(),
@@ -30,7 +30,7 @@ export default defineType({
     defineField({
       name: 'overview',
       description:
-        'Used both for the <meta> description tag for SEO, and project subheader.',
+        'Brukt i prosjektoversikten på forsiden. Maks 155 tegn.',
       title: 'Overview',
       type: 'array',
       of: [
@@ -60,7 +60,7 @@ export default defineType({
       name: 'coverImage',
       title: 'Cover Image',
       description:
-        'This image will be used as the cover image for the project. If you choose to add it to the show case projects, this is the image displayed in the list within the homepage.',
+        'Bilde som vises på prosjektsiden og i prosjektoversikten på forsiden.',
       type: 'image',
       options: {
         hotspot: true,
@@ -69,17 +69,17 @@ export default defineType({
     }),
     defineField({
       name: 'duration',
-      title: 'Duration',
+      title: 'Når ble prosjektet gjennomført?',
       type: 'duration',
     }),
     defineField({
       name: 'client',
-      title: 'Client',
+      title: 'Hvem er kunden?',
       type: 'string',
     }),
     defineField({
       name: 'site',
-      title: 'Site',
+      title: 'Link til prosjektet',
       type: 'url',
     }),
     defineField({
@@ -93,7 +93,7 @@ export default defineType({
     }),
     defineField({
       name: 'description',
-      title: 'Project Description',
+      title: 'Prosjekt beskrivelse',
       type: 'array',
       of: [
         defineArrayMember({

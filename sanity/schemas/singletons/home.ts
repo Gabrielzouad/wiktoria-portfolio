@@ -11,7 +11,7 @@ export default defineType({
   fields: [
     defineField({
       name: 'title',
-      description: 'This field is the title of your personal website.',
+      description: 'Tittel på forsiden',
       title: 'Title',
       type: 'string',
       validation: (rule) => rule.required(),
@@ -19,7 +19,7 @@ export default defineType({
     defineField({
       name: 'overview',
       description:
-        'Used both for the <meta> description tag for SEO, and the personal website subheader.',
+        'Brukt i prosjektoversikten på forsiden. Maks 155 tegn.',
       title: 'Description',
       type: 'array',
       of: [
@@ -62,7 +62,7 @@ export default defineType({
       name: 'showcaseProjects',
       title: 'Showcase projects',
       description:
-        'These are the projects that will appear first on your landing page.',
+        'Prosjekter som skal vises på forsiden.',
       type: 'array',
       of: [
         defineArrayMember({
